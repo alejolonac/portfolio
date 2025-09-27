@@ -9,33 +9,41 @@
     <meta name="robots" content="index, follow">
     <meta name="googlebot" content="index, follow">
     <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/variables.css">
+    <link rel="stylesheet" href="assets/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet" href="assets/style.css">
     <title>Alejo Lonac | Portfolio</title>
 </head>
 <body>
     <header>
         <nav class="nav">
             <ul class="nav__list">
-                <li class="nav__item"><a class="nav__link">inicio</a></li>
-                <li class="nav__item"><a class="nav__link">proyectos</a></li>
-                <li class="nav__item"><a class="nav__link">sobre mí</a></li>
-                <li class="nav__item"><a class="nav__link">contacto</a></li>
+                <li class="nav__item"><a class="nav__link">Inicio</a></li>
+                <li class="nav__item"><a class="nav__link">Proyectos</a></li>
+                <li class="nav__item"><a class="nav__link">Sobre mí</a></li>
+                <li class="nav__item"><a class="nav__link">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
     <main> 
-        <section class="titulo">
-            <h1 class="titulo__h1">
+        <section class="tituloo">
+            <h1 class="titulo">
                 <span class="titulo__1">Alejo</span>
                 <span class="titulo__2">Lonac</span>
             </h1>
 
             <p class="descripcion">Desarrollador Full Stack & Diseñador UI/UX</p>
-            <btn class="btn">Proyectos</btn>
+            <button class="btn">Proyectos 
+                <span class="flecha">
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M6 9l6 6 6-6"/>
+                </svg>
+              </span></button>
         </section>
         
         <section class="proyectos">
-            <h2 class="proyectos__h2">
+            <h2 class="titulo">
                 <span class="titulo__1">Proyectos</span>
                 <span class="titulo__2">Destacados</span>
             </h2>
@@ -49,7 +57,7 @@
         </section>
 
         <section class="sobremi">
-            <h3 class="sobremi__h3">
+            <h3 class="titulo">
                 <span class="titulo__1">Sobre</span>
                 <span class="titulo__2">Mí</span>
             </h3>
@@ -61,7 +69,7 @@
         </section>
 
         <section class="contacto">
-            <h4 class="contacto__h4">
+            <h4 class="titulo">
                 <span class="titulo__1">Como</span>
                 <span class="titulo__2">Contactarme</span> 
             </h4>
@@ -76,5 +84,7 @@
             </div>
         </section>
     </main>
+
+    <script src="javascript.js"></script>
 </body>
 </html>

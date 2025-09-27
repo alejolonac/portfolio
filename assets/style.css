@@ -1,3 +1,131 @@
-body {
-    background-color: #06080f;
+* {
+    font-family: 'Roboto', sans-serif;
 }
+
+body {
+    background: radial-gradient(circle at 30% 40%, #0d1320, #06080f 70%),
+            radial-gradient(circle at 70% 60%, #10182a, #06080f 80%),
+            #06080f;
+}
+a {
+    text-decoration: none;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+}
+
+.nav__list {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    position: fixed;
+    color: rgba(255, 255, 255, 0.2);
+    gap: 2rem;
+    font-size: 1rem;
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    border-radius: 2.5rem;
+    max-width: 25rem;
+    padding: 0.8rem 2rem;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    margin: 1rem 1rem 0 1rem;
+}
+
+.nav__item {
+    cursor: pointer;
+}
+
+.nav__item:hover {
+    color:#ddd;
+}
+
+.titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 3rem;
+    margin-top: 0;
+}
+
+.titulo__1 {
+    color: var(--color-titulo1);
+    margin-bottom: 0.5rem;
+}
+
+.titulo__2 {
+    color: var(--color-titulo2);
+}
+
+.tituloo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.descripcion {
+    color: var(--color-texto-claro);
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+.btn {
+    margin-top: 2rem;
+    position: relative;
+    padding: 16px 24px; /* un poco más de padding vertical */
+    font-size: 1.3rem;
+    color: #fff;
+    background: #06080f;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 0;
+  
+    display: flex;
+    flex-direction: column; /* 👈 flecha abajo */
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Borde animado */
+  .btn {
+    border: 2px solid transparent;
+    background: linear-gradient(#06080f, #06080f) padding-box,
+                linear-gradient(45deg, #3b82f6, #22d3ee, #6366f1, #3b82f6) border-box;
+    background-size: 100% 100%, 300% 300%;
+    animation: bordeAnimado 3s ease infinite;
+  }
+
+  @keyframes bordeAnimado {
+    0% {
+      background-position: 0% 0%, 0% 50%;
+    }
+    50% {
+      background-position: 0% 0%, 100% 50%;
+    }
+    100% {
+      background-position: 0% 0%, 0% 50%;
+    }
+  }
+  
+  /* Flecha animada */
+  .flecha {
+    display: inline-flex;
+    align-items: center;
+    animation: saltar 1.2s infinite ease-in-out;
+  }
+  
+  @keyframes saltar {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(4px);
+    }
+  }
