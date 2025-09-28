@@ -32,6 +32,23 @@ a {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     margin: 1rem 1rem 0 1rem;
+    z-index: 10;
+}
+
+.nav__link {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.nav__link--active {
+  color: #ffffff;
+}
+
+.nav__link:hover {
+  color: #ddd;
+}
+
+.nav__link--active:hover {
+  color: #ffffff;
 }
 
 .nav__item {
@@ -129,3 +146,118 @@ a {
       transform: translateY(4px);
     }
   }
+
+
+.proyectos__cards {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.proyecto__card {
+  background-color: var(--color-principal);
+  padding: 1rem;
+  border-radius: 16px;
+  min-height: 300px; /* Altura mínima para cada carta */
+  max-width: 60rem;
+  display: flex;
+  flex-direction: column;
+  border: 0.5px solid rgba(255, 255, 255, 0.086);
+}
+
+/* Estilos para los elementos internos de las cartas */
+.imagen__cotizador {
+  width: 100%;
+  height: 250px;
+  background-image: url(../imagenes/cotizador.webp);
+  background-size: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.imagen__aerogym {
+  width: 100%;
+  height: 250px;
+  background-image: url(../imagenes/aerogym.webp);
+  background-size: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.imagen__jardin {
+  width: 100%;
+  height: 250px;
+  background-image: url(../imagenes/jardin.webp);
+  background-size: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.imagen__ingles {
+  width: 100%;
+  height: 250px;
+  background-image: url(../imagenes/ingles.webp);
+  background-size: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.titulo__proyecto {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.descripcion__proyecto {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  flex-grow: 1; /* Para que ocupe el espacio disponible */
+}
+
+.descripcion__texto {
+  margin: 0;
+  overflow: hidden;
+  line-height: 1.4;
+  max-height: 2.5em; /* Altura de exactamente 2 líneas (1.4 * 2) */
+  max-width: 32.5rem;
+  transition: max-height 1.5s ease;
+}
+
+.descripcion__texto.expandido {
+  max-height: 8em; /* Altura más proporcional para animación uniforme */
+}
+
+.ver-mas-btn {
+  background: none;
+  border: none;
+  color: var(--color-texto-claro);
+  font-size: 0.8rem;
+  cursor: pointer;
+  padding: 0.3rem 0;
+  margin-top: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+
+.tecnologias {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.tecnologia {
+  color: #a855f7;
+  padding: 0.2rem 0.7rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  align-self: flex-start;
+  
+  /* Borde animado igual que el botón */
+  border: 2px solid transparent;
+  background: linear-gradient(var(--color-principal), var(--color-principal)) padding-box,
+              linear-gradient(45deg, #ec4899, #a855f7, #d946ef, #ec4899) border-box;
+  background-size: 100% 100%, 300% 300%;
+  animation: bordeAnimado 3s ease infinite;
+}
+

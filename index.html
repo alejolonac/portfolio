@@ -18,16 +18,16 @@
     <header>
         <nav class="nav">
             <ul class="nav__list">
-                <li class="nav__item"><a class="nav__link">Inicio</a></li>
-                <li class="nav__item"><a class="nav__link">Proyectos</a></li>
-                <li class="nav__item"><a class="nav__link">Sobre mí</a></li>
-                <li class="nav__item"><a class="nav__link">Contacto</a></li>
+                <li class="nav__item"><a class="nav__link" href="#inicio">Inicio</a></li>
+                <li class="nav__item"><a class="nav__link" href="#proyectos">Proyectos</a></li>
+                <li class="nav__item"><a class="nav__link" href="#sobremi">Sobre mí</a></li>
+                <li class="nav__item"><a class="nav__link" href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
     <main> 
-        <section class="tituloo">
+        <section class="tituloo" id="inicio">
             <h1 class="titulo">
                 <span class="titulo__1">Alejo</span>
                 <span class="titulo__2">Lonac</span>
@@ -37,26 +37,57 @@
             <button class="btn">Proyectos 
                 <span class="flecha">
                 <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                  <path d="M6 9l6 6 6-6"/>
+                <path d="M6 9l6 6 6-6"/>
                 </svg>
-              </span></button>
+            </span></button>
         </section>
         
-        <section class="proyectos">
+        <section class="proyectos" id="proyectos">
             <h2 class="titulo">
                 <span class="titulo__1">Proyectos</span>
                 <span class="titulo__2">Destacados</span>
             </h2>
 
             <div class="proyectos__cards">
-                <div class="proyecto__card"></div>
-                <div class="proyecto__card"></div>
-                <div class="proyecto__card"></div>
-                <div class="proyecto__card"></div>
+                <div class="proyecto__card">
+                    <div class="imagen__cotizador"></div>
+                    <h3 class="titulo__proyecto">Multicotizador de Seguros</h3>
+                    <div class="descripcion__proyecto">
+                        <p class="descripcion__texto">Desarrollé una aplicación donde integre APIs de diferentes compañías para comparar seguros de automóviles. En el frontend me enfoqué en la experiencia de usuario, mientras que en el backend implementé notificaciones automáticas por email mediante Nodemailer al seleccionar una cobertura.</p>
+                        <button class="ver-mas-btn" onclick="toggleDescripcion(this)">Ver más...</button>
+                    </div>
+                    <div class="tecnologias">
+                        <span class="tecnologia">html</span>
+                        <span class="tecnologia">CSS</span>
+                        <span class="tecnologia">js</span>
+                        <span class="tecnologia">node.js</span>
+                        <span class="tecnologia">Express.js</span>
+                    </div>
+                </div>
+                <div class="proyecto__card">
+                    <div class="imagen__aerogym"></div>
+                    <h3 class="titulo__proyecto">Academia de Danza </h3>
+                    <p class="descripcion__proyecto">Multicotizador de seguros de auto con la integracion de apis de las aseguradoras.</p>
+                    <span class="tecnologia">html</span>
+                </div>
+            </div>
+            <div class="proyectos__cards" >
+                <div class="proyecto__card">
+                    <div class="imagen__jardin"></div>
+                    <h3 class="titulo__proyecto">Landing Page</h3>
+                    <p class="descripcion__proyecto">Multicotizador de seguros de auto con la integracion de apis de las aseguradoras.</p>
+                    <span class="tecnologia">html</span>
+                </div>
+                <div class="proyecto__card">
+                    <div class="imagen__ingles"></div>
+                    <h3 class="titulo__proyecto">Web Institucional</h3>
+                    <p class="descripcion__proyecto">Multicotizador de seguros de auto con la integracion de apis de las aseguradoras.</p>
+                    <span class="tecnologia">html</span>
+                </div>
             </div>
         </section>
 
-        <section class="sobremi">
+        <section class="sobremi" id="sobremi">
             <h3 class="titulo">
                 <span class="titulo__1">Sobre</span>
                 <span class="titulo__2">Mí</span>
@@ -68,7 +99,7 @@
             </div>
         </section>
 
-        <section class="contacto">
+        <section class="contacto" id="contacto">
             <h4 class="titulo">
                 <span class="titulo__1">Como</span>
                 <span class="titulo__2">Contactarme</span> 
