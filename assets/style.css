@@ -151,6 +151,7 @@ a {
 .proyectos__cards {
   display: flex;
   justify-content: center;
+  align-items: flex-start;
   gap: 1.5rem;
   margin-bottom: 1.5rem;
 }
@@ -261,3 +262,96 @@ a {
   animation: bordeAnimado 3s ease infinite;
 }
 
+.botones__proyecto {
+  margin-top: auto;
+  padding-top: 1rem;
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.boton__proyecto {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex: 1;
+  background: linear-gradient(135deg, #8B5CF6, #A855F7);
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.boton__proyecto::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' viewBox='0 0 24 24'%3E%3Cpath d='M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.boton__proyecto:hover {
+  background: linear-gradient(135deg, #7C3AED, #9333EA);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4);
+}
+
+.boton__proyecto:active {
+  transform: translateY(0);
+}
+
+.boton__github {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.boton__github:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+.boton__github:active {
+  transform: translateY(0);
+}
+
+.sobremi {
+  margin-top: 10rem;
+}
+
+.sobremi__container {
+  display: flex;
+  max-width: 60rem;
+  margin: 0 auto;
+  gap: 10rem;
+}
+
+.sobremi__img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 1/1;
+}
+
+.sobremi__descripcion {
+  color: #ddd;
+}
