@@ -31,6 +31,43 @@ function updateActiveNavLink() {
     }
 }
 
+// Función para scroll suave personalizado
+function smoothScrollTo(targetPosition, duration = 800) {
+    const startPosition = window.pageYOffset;
+    const distance = targetPosition - startPosition;
+    let startTime = null;
+
+    function animation(currentTime) {
+        if (startTime === null) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const run = easeInOutQuad(timeElapsed, startPosition, distance, duration);
+        window.scrollTo(0, run);
+        if (timeElapsed < duration) requestAnimationFrame(animation);
+    }
+
+    function easeInOutQuad(t, b, c, d) {
+        t /= d / 2;
+        if (t < 1) return c / 2 * t * t + b;
+        t--;
+        return -c / 2 * (t * (t - 2) - 1) + b;
+    }
+
+    requestAnimationFrame(animation);
+}
+
+// Función para scroll suave a una sección específica
+function smoothScrollToSection(sectionId) {
+    const targetSection = document.getElementById(sectionId);
+    
+    if (targetSection) {
+        // Calcular la posición de la sección
+        const offsetTop = targetSection.offsetTop - 80; // 80px de offset para el nav fijo
+        
+        // Scroll suave con animación personalizada
+        smoothScrollTo(offsetTop, 800);
+    }
+}
+
 // Función para scroll suave al hacer clic
 function smoothScroll() {
     const navLinks = document.querySelectorAll('.nav__link[href^="#"]');
@@ -40,14 +77,7 @@ function smoothScroll() {
             e.preventDefault();
             
             const targetId = this.getAttribute('href').substring(1);
-            const targetSection = document.getElementById(targetId);
-            
-            if (targetSection) {
-                targetSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
+            smoothScrollToSection(targetId);
         });
     });
 }
