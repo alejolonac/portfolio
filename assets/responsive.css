@@ -1,3 +1,55 @@
-    @media (min-width: 768px) {
-        
+/* Responsive para contacto */
+@media (max-width: 768px) {
+    .nav__list {
+        gap: 1.6rem;
     }
+
+    .contacto__container {
+      flex-direction: column;
+      gap: 2rem;
+      padding: 0 1rem;
+    }
+    
+    .contacto__formulario {
+      padding: 2rem;
+    }
+    
+    .contacto__redes {
+      grid-template-columns: 1fr;
+    }
+
+    .habilidades__cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+      }
+      
+      .habilidad__card {
+        max-width: 100%;
+        min-width: auto;
+      }
+
+      .proyectos__cards {
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      .imagen__cotizador, .imagen__aerogym, .imagen__jardin, .imagen__ingles {
+        background-position: center;
+      }
+
+      .sobremi__container {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+      }
+
+      .sobremi__descripcion {
+        margin: 17.6px 1rem 0 1rem;
+      }
+
+      .habilidades__cards {
+        margin: 2rem 1rem 0 1rem;
+      }
+  }
+
