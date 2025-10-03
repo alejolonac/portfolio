@@ -223,13 +223,13 @@ a {
   margin: 0;
   overflow: hidden;
   line-height: 1.4;
-  max-height: 2.5em; /* Altura de exactamente 2 líneas (1.4 * 2) */
+  max-height: 2.5rem; /* Altura de exactamente 2 líneas (1.4 * 2) */
   max-width: 32.5rem;
   transition: max-height 1.5s ease;
 }
 
 .descripcion__texto.expandido {
-  max-height: 8em; /* Altura más proporcional para animación uniforme */
+  max-height: 8rem; /* Altura más proporcional para animación uniforme */
 }
 
 .ver-mas-btn {

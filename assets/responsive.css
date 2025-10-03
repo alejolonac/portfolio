@@ -34,6 +34,10 @@
         gap: 2rem;
       }
 
+      .descripcion__texto.expandido {
+        max-height: 11rem;
+      }
+
       .imagen__cotizador, .imagen__aerogym, .imagen__jardin, .imagen__ingles {
         background-position: center;
       }
