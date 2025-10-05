@@ -5,15 +5,27 @@ function updateActiveNavLink() {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav__link');
     
-    let currentSection = '';
     const scrollPosition = window.scrollY + 100; // Offset para activar antes
+    
+    // Encontrar la sección más cercana al scroll actual
+    let closestSection = '';
+    let minDistance = Infinity;
     
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.offsetHeight;
+        const sectionCenter = sectionTop + (sectionHeight / 2);
         
+        // Calcular distancia desde el centro de la sección al scroll position
+        const distance = Math.abs(scrollPosition - sectionCenter);
+        
+        // Si estamos dentro de la sección, priorizar esa
         if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-            currentSection = section.getAttribute('id');
+            closestSection = section.getAttribute('id');
+            minDistance = 0; // Distancia 0 para secciones activas
+        } else if (distance < minDistance) {
+            closestSection = section.getAttribute('id');
+            minDistance = distance;
         }
     });
     
@@ -23,8 +35,8 @@ function updateActiveNavLink() {
     });
     
     // Agregar clase activa al enlace correspondiente
-    if (currentSection) {
-        const activeLink = document.querySelector(`.nav__link[href="#${currentSection}"]`);
+    if (closestSection) {
+        const activeLink = document.querySelector(`.nav__link[href="#${closestSection}"]`);
         if (activeLink) {
             activeLink.classList.add('nav__link--active');
         }

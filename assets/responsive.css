@@ -2,6 +2,15 @@
 @media (max-width: 768px) {
     .nav__list {
         gap: 1.6rem;
+        flex-wrap: nowrap;
+    }
+
+    .nav__item {
+      flex-shrink: 0;
+    }
+
+    .nav__link {
+      white-space: nowrap;
     }
 
     .contacto__container {
