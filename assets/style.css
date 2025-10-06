@@ -225,7 +225,7 @@ a {
   line-height: 1.4;
   max-height: 2.5rem; /* Altura de exactamente 2 líneas (1.4 * 2) */
   max-width: 32.5rem;
-  transition: max-height 1.5s ease;
+  transition: max-height 2s ease;
 }
 
 .descripcion__texto.expandido {
