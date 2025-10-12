@@ -19,22 +19,21 @@ function updateActiveNavLink() {
         // Calcular distancia desde el centro de la sección al scroll position
         const distance = Math.abs(scrollPosition - sectionCenter);
         
-        // Si estamos dentro de la sección, priorizar esa
         if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
             closestSection = section.getAttribute('id');
-            minDistance = 0; // Distancia 0 para secciones activas
+            minDistance = 0; 
         } else if (distance < minDistance) {
             closestSection = section.getAttribute('id');
             minDistance = distance;
         }
     });
     
-    // Remover clase activa de todos los enlaces
+
     navLinks.forEach(link => {
         link.classList.remove('nav__link--active');
     });
     
-    // Agregar clase activa al enlace correspondiente
+
     if (closestSection) {
         const activeLink = document.querySelector(`.nav__link[href="#${closestSection}"]`);
         if (activeLink) {
@@ -72,10 +71,8 @@ function smoothScrollToSection(sectionId) {
     const targetSection = document.getElementById(sectionId);
     
     if (targetSection) {
-        // Calcular la posición de la sección
-        const offsetTop = targetSection.offsetTop - 80; // 80px de offset para el nav fijo
+        const offsetTop = targetSection.offsetTop - 80; 
         
-        // Scroll suave con animación personalizada
         smoothScrollTo(offsetTop, 800);
     }
 }
@@ -96,8 +93,8 @@ function smoothScroll() {
 
 // Ejecutar cuando la página carga
 document.addEventListener('DOMContentLoaded', function() {
-    updateActiveNavLink(); // Verificar sección inicial
-    smoothScroll(); // Activar scroll suave
+    updateActiveNavLink(); 
+    smoothScroll(); 
 });
 
 // Ejecutar cuando el usuario hace scroll
